@@ -1,0 +1,262 @@
+#include <iostream>
+#include <conio.h> 
+#include <cstdlib>
+#include <math.h>
+#include <windows.h>
+using namespace std;
+
+
+int main()
+{
+	cout<<"***********************************************************************************************************************"<<endl; 
+	cout<<"*                                                     KINEMATYKA                                                      *"<<endl; 
+	cout<<"***********************************************************************************************************************"<<endl;
+	cout<<"* 1. Ruch prostoliniowy (charakterystyka ogolna ze wzorami)                                                           *"<<endl; 
+	cout<<"* 2. Predkosc w ruchu prostoliniowym                                                                                  *"<<endl; 
+	cout<<"* 3. Ruch jednostajny prostoliniowy                                                                                   *"<<endl; 
+	cout<<"* 4. Przyspieszenie w ruchu jednostajnie zmiennym                                                                     *"<<endl; 
+	cout<<"* 5. Ruch jednostajnie przyspieszony                                                                                  *"<<endl; 
+	cout<<"* 6. Ruch jednostajnie opozniony                                                                                      *"<<endl;
+	cout<<"***********************************************************************************************************************"<<endl;  
+	cout<<"* 7. Ruch krzywoliniowy (charakterystyka ogolna ze wzorami)                                                           *"<<endl; 
+	cout<<"* 8. Predkosc w ruchu krzywoliniowym                                                                                  *"<<endl; 
+	cout<<"* 9. Przyspieszenie w ruchu krzywoliniowym                                                                            *"<<endl; 
+	cout<<"* 10. Ruch jednostajny po okregu                                                                                      *"<<endl; 
+	cout<<"* 11. Ruch jednostajnie zmienny po okregu                                                                             *"<<endl; 
+	cout<<"* 12. Rzut poziomy                                                                                                    *"<<endl; 
+	cout<<"* 13. Rzut pionowy                                                                                                    *"<<endl; 
+	cout<<"* 14. Rzut ukosny                                                                                                     *"<<endl;				
+	cout<<"***********************************************************************************************************************"<<endl; 
+	
+	int c; 
+	cout<<"Wybierz interesujacy Cie temat"<<endl; 
+	cin>>c; 
+	cout<<"***********************************************************************************************************************"<<endl;
+	cout<<"Wybrales zadanie numer "<<c<<endl; 
+	cout<<"***********************************************************************************************************************"<<endl;
+	
+	switch(c)
+	{
+		case 0:
+		break;
+		
+		case 1:
+			{
+				cout<<"***********************************************************************************************************************"<<endl; 
+				cout<<"*                                                  RUCH PROSTOLINIOWY                                                 *"<<endl; 
+				cout<<"***********************************************************************************************************************"<<endl; 
+				cout<<"* 1. Ruch prostoliniowy (charakterystyka ogolna ze wzorami)                                                           *"<<endl; 			
+				cout<<"* 0. - Wyjscie z aplikacji                                                                                            *"<<endl;
+				cout<<"***********************************************************************************************************************"<<endl; 
+				cout<<"* UWAGA 1 !!! symbole matematyczne zostaly uwzglednione w postaci slownej w nawiasie kwadratowym                      *"<<endl;
+				cout<<"* UWAGA 2 !!! jednostki: jednostki podstawowe ukladu SI                                                               *"<<endl;
+				cout<<"* UWAGA 3 !!! we wzorach zostal pominiety symbol mnozenia zwiazany z zabiegiem estetycznym w matematyce (a*b -> ab)   *"<<endl;
+				cout<<"***********************************************************************************************************************"<<endl; 
+				cout<<"* Symbole i oznaczenia:                                                                                               *"<<endl;
+				cout<<"* s, [delta]s, S, [delta]S -przebyta droga                                                                            *"<<endl;
+				cout<<"* t, [delta]t - czas ruchu                                                                                            *"<<endl;
+				cout<<"* V, [delta]V - predkosc ruchu                                                                                        *"<<endl;
+				cout<<"* V0 - predkosc poczatkowa                                                                                            *"<<endl;
+				cout<<"* Vk - predkosc koncowa                                                                                               *"<<endl;
+				cout<<"* a - przyspieszenie                                                                                                  *"<<endl;
+				cout<<"* x0 - odleglosc pd poczatku ukladu odniesienia                                                                       *"<<endl;
+				cout<<"* x(t) - przemieszczenie w czasie t od poczatku ukladu odniesienia                                                    *"<<endl;
+				cout<<"***********************************************************************************************************************"<<endl; 
+				cout<<"***********************************************************************************************************************"<<endl; 
+				cout<<"* Wzor na droge w ruchu jednostajnie prostoliniowym:                                                                  *"<<endl;
+				cout<<"*                                                 s = vt                                                              *"<<endl;
+				cout<<"* Wzor na przemieszczenie ciala od poczatku ukladu odniesienia w ruchu jednostajnym:                                  *"<<endl;
+				cout<<"*                                             x(t) = x0 + vt                                                          *"<<endl;
+				cout<<"* Wzor na droge w ruchu jednostajnie przyspieszonym bez predkości poczatkowej:                                        *"<<endl;
+				cout<<"*                                             s = (at^2)/2                                                            *"<<endl;
+				cout<<"* Wzor na droge w ruchu jednostajnie przyspieszonym z predkoscia poczatkowa:                                          *"<<endl;
+				cout<<"*                                          s = v0t + (at^2/2)                                                         *"<<endl;
+				cout<<"* Wzor na droge w ruchu jednostajnie opoznionym z predkoscia poczatkowa:                                              *"<<endl;
+				cout<<"*                                          s = v0t + (at^2/2)                                                         *"<<endl;
+				cout<<"* Wzor na przemieszczenie ciala od poczatku ukladu odniesienia w ruchu jednostajnie przyspieszonym:                   *"<<endl;	
+				cout<<"*                                      x(t) = x0 + V0t + (at^2/2)                                                     *"<<endl;
+				cout<<"* Wzor na przemieszczenie ciala od poczatku ukladu odniesienia w ruchu jednostajnie opoznionym:                       *"<<endl;
+				cout<<"*                                      x(t) = x0 + V0t - (at^2/2)                                                     *"<<endl;
+				cout<<"* Wzor na predkosc koncowa (po czasie t) w ruchu jednostajnie przyspieszonym:                                         *"<<endl;
+				cout<<"*                                            Vk = V0 + at                                                             *"<<endl;
+				cout<<"* Wzor na predkosc koncowa (po czasie t) w ruchu jednostajnie opoznionym:                                             *"<<endl;
+				cout<<"*                                            Vk = V0 - at                                                             *"<<endl;
+				cout<<"* Wzor na przyspieszenie w ruchu jednostajnie przyspieszonym:                                                         *"<<endl;
+				cout<<"*                                     a = [delta]V / [delta]t                                                         *"<<endl;
+				cout<<"* Wzor na przyspieszenie w ruchu jednostajnie opoznionym:                                                             *"<<endl;
+				cout<<"*                                   - a = [delta]V / [delta]t                                                         *"<<endl;
+				cout<<"***********************************************************************************************************************"<<endl;
+				cout<<"***********************************************************************************************************************"<<endl;
+				cout<<"* Jednostki:                                                                                                          *"<<endl;
+				cout<<"* czas - 1 sekunda [1 s]                                                                                              *"<<endl;
+				cout<<"* droga - 1 metr [1 m]                                                                                                *"<<endl;
+				cout<<"* predkosc - 1 metr/1 sekunde ->  [1 m/s]                                                                             *"<<endl;
+				cout<<"* przyspieszenie - 1 metr / 1 sekunda ^2 -> [1 m/s^2]                                                                 *"<<endl;
+				cout<<"***********************************************************************************************************************"<<endl;
+			}
+		break;
+		case 2:
+			{
+				
+			}
+		break;
+		case 3:
+			{
+				
+			}
+		break;
+		case 4:
+			{
+				
+			}
+		break;
+		case 5:
+			{
+				
+			}
+		break;
+		case 6:
+			{
+				
+			}
+		break;
+		case 7:
+			{
+				cout<<"***********************************************************************************************************************"<<endl; 
+				cout<<"*                                                  RUCH KRZYWOLINIOWY                                                 *"<<endl; 
+				cout<<"***********************************************************************************************************************"<<endl; 
+				cout<<"* 7. Ruch krzywoliniowy (charakterystyka ogolna ze wzorami)                                                           *"<<endl; 			
+				cout<<"* 0. - Wyjscie z aplikacji                                                                                            *"<<endl;
+				cout<<"***********************************************************************************************************************"<<endl; 
+				cout<<"* UWAGA 1 !!! symbole matematyczne zostaly uwzglednione w postaci slownej w nawiasie kwadratowym                      *"<<endl;
+				cout<<"* UWAGA 2 !!! jednostki: jednostki podstawowe ukladu SI                                                               *"<<endl;
+				cout<<"* UWAGA 3 !!! we wzorach zostal pominiety symbol mnozenia zwiazany z zabiegiem estetycznym w matematyce (a*b -> ab)   *"<<endl;
+				cout<<"***********************************************************************************************************************"<<endl; 
+				cout<<"* Symbole i oznaczenia:                                                                                               *"<<endl;
+				cout<<"* - ruch po okregu -                                                                                                  *"<<endl;
+				cout<<"* [alfa] - kat zatoczony przez cialo                                                                                  *"<<endl;
+				cout<<"* [mala omega] - prędkość kątowa                                                                                      *"<<endl;
+				cout<<"* [mala omega]0 - poczatkowa predkosc katowa                                                                          *"<<endl;
+				cout<<"* [maly epsilon] - przyspieszenie katowe                                                                              *"<<endl;
+				cout<<"* [delta] - zmiana (roznica miedzy najwieksza a najmniejsza wartoscia np. predkosci)                                  *"<<endl;
+				cout<<"* t – czas ruchu                                                                                                      *"<<endl;
+				cout<<"* s – przebyta droga                                                                                                  *"<<endl;
+				cout<<"* v – predkosc liniowa                                                                                                *"<<endl;
+				cout<<"* as - przyspieszenie styczne                                                                                         *"<<endl;
+				cout<<"* ad - przyspieszenie dosrodkowe                                                                                      *"<<endl;
+				cout<<"* r – promien                                                                                                         *"<<endl;
+				cout<<"* f – czestotliwosc obrotow                                                                                           *"<<endl;
+				cout<<"* n – ilosc obrotow                                                                                                   *"<<endl;
+				cout<<"* - rzuty -                                                                                                           *"<<endl;
+				cout<<"* h – wysokosc, na ktorej znajduje sie cialo                                                                          *"<<endl;
+				cout<<"* t – czas ruchu                                                                                                      *"<<endl;
+				cout<<"* g – przyspieszenie ziemskie                                                                                         *"<<endl;
+				cout<<"* V0 - predkosc poczatkowa                                                                                            *"<<endl;
+				cout<<"* y(t) - przemieszczenie w czasie t od poczatku ukladu odniesienia w ruchu pionowym                                   *"<<endl;
+				cout<<"***********************************************************************************************************************"<<endl; 
+				cout<<"***********************************************************************************************************************"<<endl; 
+				cout<<"* - ruch po okregu -                                                                                                  *"<<endl;
+				cout<<"* Wzor na droge przebyta przez cialo:                                                                                 *"<<endl;
+				cout<<"*                                                  s = r|a|                                                           *"<<endl;
+				cout<<"* Wzor na predkosc liniowa:                                                                                           *"<<endl;
+				cout<<"*                                                  V = r|w|                                                           *"<<endl;
+				cout<<"* Wzor na przyspieszenie styczne:                                                                                     *"<<endl;
+				cout<<"*                                                  as = r|e|                                                          *"<<endl;
+				cout<<"* Wzor na droge katowa w ruchu jednostajnym po okregu:                                                                *"<<endl;
+				cout<<"*                                                    a =wt                                                            *"<<endl;
+				cout<<"* Wzor na predkosc katowa w ruchu jednostajnie przyspieszonym po okregu z [mala omega]0:                              *"<<endl;
+				cout<<"*                                                 w = w0 + et                                                         *"<<endl;
+				cout<<"* Wzor na predkosc katowa w ruchu jednostajnie opoznionym po okregu z [mala omega]0:                                  *"<<endl;
+				cout<<"*                                                 w = w0 - et                                                         *"<<endl;
+				cout<<"* Wzor na przebyta droge katowa:                                                                                      *"<<endl;
+				cout<<"*                                                   a = 2pn                                                           *"<<endl;
+				cout<<"* Wzor na prędkosc katowa:                                                                                            *"<<endl;
+				cout<<"*                                                   w = 2pf                                                           *"<<endl;
+				cout<<"* Wzor na przyspieszenie dosrodkowe:                                                                                  *"<<endl;
+				cout<<"*                                                ad = (V^2/r)                                                         *"<<endl;
+				cout<<"* Wzor na przyspieszenie styczne:                                                                                     *"<<endl;
+				cout<<"*                                            as = [delta]V / [delta]t                                                 *"<<endl;
+				cout<<"* Wzor na przyspieszenie w ruchu po okregu, bedace suma wektorowa ad i as:                                            *"<<endl;
+				cout<<"*                                            [->]a = [->]ad + [->]as                                                  *"<<endl;
+				cout<<"* Wzor na predkosc katowa w ruchu po okregu i srednia predkosc katowa w ruchu jednostajnie przyspieszonym po okregu:  *"<<endl;
+				cout<<"*                                   [mala omega] = [delta][alfa] / [delta]t                                           *"<<endl;
+				cout<<"* Wzor na przyspieszenie katowe w ruchu po okręgu:                                                                    *"<<endl;
+				cout<<"*                               [maly epsilon] = [delta][mala omega] / [delta]t                                       *"<<endl;
+				cout<<"* Wzor na droge katowa w ruchu jednostajnie przyspieszonym po okregu z [mala omega]0:                                 *"<<endl;
+				cout<<"*                                  [alfa] = [mala omega]t + ([male epsilon]t^2/2)                                     *"<<endl;
+				cout<<"* Wzor na droge katowa w ruchu jednostajnie opozniony po okregu z [mala omega]0:                                      *"<<endl;
+				cout<<"*                                  [alfa] = [mala omega]t + ([male epsilon]t^2/2)                                     *"<<endl;
+				cout<<"* - rzuty -                                                                                                           *"<<endl;
+				cout<<"* Wzor dzieki ktoremu obliczmy przebyta droge w spadku swobodnym ciala:                                               *"<<endl;
+				cout<<"*                                               h = (gt^2)/2                                                          *"<<endl;
+				cout<<"* Wzor dzieki ktoremu obliczamy przemieszczenie ciala od poczatku ukladu wspolrzednych w rzucie pionowym w gore:      *"<<endl;
+				cout<<"*                                        y(t) = h +V0t - (gt^2/2)                                                     *"<<endl;
+				cout<<"* Wzor na maksymalna wysokosc w rzucie pionowym w gore z predkoscia poczatkowa V0:                                    *"<<endl;
+				cout<<"*                                               hmax = (V0^2/2g)                                                      *"<<endl;
+				cout<<"* Wzor na zasieg w rzucie poziomym:                                                                                   *"<<endl;
+				cout<<"*                                          z = V[pierwiastek](2h/g)                                                   *"<<endl;
+				cout<<"* Wzor na zasieg w rzucie ukosnym:                                                                                    *"<<endl;
+				cout<<"*                                         z = ((V0^2)sin2[alfa])/g                                                    *"<<endl;
+				cout<<"* Wzor na wysokosc maksymalna w rzucie ukosnym:                                                                       *"<<endl;
+				cout<<"*                                       hmax = ((V0^2)sin^2[alfa])/g                                                  *"<<endl;
+				cout<<"***********************************************************************************************************************"<<endl;
+				cout<<"***********************************************************************************************************************"<<endl;
+				cout<<"* Jednostki:                                                                                                          *"<<endl;
+				cout<<"* czas - 1 sekunda [1 s]                                                                                              *"<<endl;
+				cout<<"* droga - 1 metr [1 m]                                                                                                *"<<endl;
+				cout<<"* predkosc - 1 metr/1 sekunde [1 m/s]                                                                                 *"<<endl;
+				cout<<"* przyspieszenie - 1 metr / 1 sekunda ^2  [1 m/s^2]                                                                   *"<<endl;
+				cout<<"* predkosc katowa - 1/1 sekunde [1/s]                                                                                 *"<<endl;
+				cout<<"* przyspieszenie katowe - 1 / 1 sekunda ^2  [1 /s^2]                                                                  *"<<endl;
+				cout<<"* przyspieszenie styczne - 1 metr / 1 sekunda ^2  [1 m/s^2]                                                           *"<<endl;
+				cout<<"* przyspieszenie dosrodkowe - 1 metr / 1 sekunda ^2  [1 m/s^2]                                                        *"<<endl;
+				cout<<"* czestotliowsc - 1 Herc [1 Hz]                                                                                       *"<<endl;
+				cout<<"* wysokosc - 1 metr [1 m]                                                                                             *"<<endl;
+				cout<<"* przyspieszenie ziemskie - 1 metr / 1 sekunda ^2  [1 m/s^2]                                                          *"<<endl;
+				cout<<"***********************************************************************************************************************"<<endl;
+			}
+		break;
+		case 8:
+			{
+				
+			}
+		break;
+		case 9:
+			{
+				
+			}
+		break;
+		case 10:
+			{
+				
+			}
+		break;
+		case 11:
+			{
+				
+			}
+		break;
+		case 12:
+			{
+				
+			}
+		break;
+		case 13:
+			{
+				
+			}
+		break;
+		case 14:
+			{
+				
+			}
+		break;
+		default:
+				cout<<"* Wybrales niepoprawne zadanie "<<endl;
+		break;
+	}
+	return 0;
+	
+	
+}
+
